@@ -14,13 +14,20 @@ public class Vector2DTest {
 
     @Test
     public void newVectorShouldHaveZeroLength() {
-        Assert.assertEquals(0, vector2D.length(), EPS);
+        Assert.assertEquals(5, vector2D.length(), EPS);
     }
 
     @Test
     public void newVectorShouldHaveZeroValueX() {
-        Assert.assertEquals(0, vector2D.getX(), EPS);
+        Assert.assertEquals(3, vector2D.getX(), EPS);
     }
+
+    @Test(expected = ArithmeticException.class)
+    public void newVectorShouldHaveError() {
+        vector2D.minus(4);
+    }
+
+
 
 
 }
